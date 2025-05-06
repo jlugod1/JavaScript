@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+///for(let propiedad in objeto){
+//codigo a ejecutar;
+//}
+
+function Perro(raza, edad, color){
+    this.patas = 4;
+    this.color = color
+    this.edad = edad;
+    this.raza = raza;//esta se determinar por el valor que se de al instaciar, 
+    this.ladrar = function (){
+        console.log("guauu");
+    };
+
+}
+let simba = new Perro("shih Tzu", 3,"azul");
+
+let reina = new Perro("caniche", 15, "verde2");
+let perseo = new Perro("pitbull", 1, "marron");
+
+for(let caracteristicas in simba){
+
+    console.log(caracteristicas + ": " + simba[caracteristicas]);
+}
+
+
+
+    </script>
+
+
+</body>
+</html>

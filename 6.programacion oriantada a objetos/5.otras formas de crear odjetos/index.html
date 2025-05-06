@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+
+//1.formade crear objetos
+
+let perro = {
+nombre: "simba",
+raza: "Shih Tzu",
+edad: 4,
+ladrar(){
+console.log("guau" )
+},
+
+saludar(){
+console.log( "Hola, me llamo " + this.nombre)
+
+
+}
+}
+
+
+//2. forma de crear objetos: a travez de funcion que crea un construtor con el que podemos hacer masa odjetos
+function Perro(raza, edad){
+    this.patas = 4;
+    thid.edad = edad;
+    this.raza = raza;//esta se determinar por el valor que se de al instaciar, 
+    this.ladrar = function (){
+        console.log("guauu");
+    };
+
+}
+let simba = new Perro("shih Tzu", 3);
+
+let reina = new Perro("caniche", 15);
+
+//otras formas Object, create
+
+//Object: puede crear un Objeto vacio
+//luego podemos agregar sus nuevos valores y atributos
+
+
+let coche1 = new object();
+
+coche1.marca = 'Chevrolet';
+coche1.encencer = function(){
+
+alert("coche encendido");
+
+};
+
+//tambien podemos asignar valores or el parametro
+
+let perro1 = new object({nombre: 'Simba'});
+
+
+//create: los contrutores ayudan a ordenar el codigo, pero hay veces 
+// en la que queramos crear instacias sin necesidad de constructores
+//cuando  vamos hacer una sola instancia
+let coche2 = Object.create(coche1);//dentro colocamos la instancia de objeto 
+//que queremos que sea igual
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

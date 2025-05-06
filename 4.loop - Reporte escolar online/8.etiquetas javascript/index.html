@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    
+<script>
+// Primer bucle
+miloop:
+for(let y = 1; y <= 10; y++) {
+    if(y == 4) {
+        break miloop;
+    } else {
+        document.write(y);
+    }
+}
+
+// Segundo bucle anidado
+let alto = 4;
+let ancho = 3;
+loopExterno:
+for(let i = 1; i <= alto; i++) {  // Cambiado a 'i' para evitar conflicto
+    for(let j = 1; j <= ancho; j++) {  // Cambiado a 'j'
+        document.write("<br>" + i + "." + j + "<br>");
+        if(i == 2 && j == 2) {
+            break loopExterno;
+        }
+    }
+}
+
+// Procesamiento de array
+let miArray = [[2,4,5],[3,0,6],[9,4,7]];
+
+function testLoop() {
+    for (let array of miArray) {
+       for (let numero of array) {
+            console.log(numero)
+          document.write(array);
+        }   
+   }
+}
+console.log(miArray)
+document.write(miArray);
+testLoop(); // Llamada a la función
+</script>
+
+</body>
+</html>

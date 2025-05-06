@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //en este loop no importa la condicion inicia siempre se ejecuta una vez
+        //a diferencia de los for
+let vidas = 5;
+
+do{
+
+console.log("vidas: " + vidas);
+vidas--;
+
+
+
+}while (vidas >= 0 );
+
+
+//los prompt son como lo s alert pero le da la posivilidad al usuario de escribir
+let escribe = prompt("Escribe algo");
+
+
+let nombre;
+do{
+
+nombre = prompt("Dime mi nombre");
+
+}while (nombre != "fede");
+
+document.write("<h1>Ese es mi nombre</h1>") ;
+    
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <h1>ingrese su edad</h1>
+    <input type="number" id="comprobar">
+    <button onclick="calcular()"> comprobar</button>
+    
+    <h1 id="r2">tiene cervesa gratis</h1>
+    
+
+    <h1 id="r1">puede ingresar</h1>
+
+    <h1 id="r3">entrada gratis</h1>
+
+    <script>
+
+
+
+function calcular(){
+
+let respuesta1 = document.getElementById("r1");
+let respuesta2 = document.getElementById("r2");
+let respuesta3 = document.getElementById("r3");
+
+
+
+let elementoEdad = document.getElementById("comprobar");
+let edad = elementoEdad.value;
+
+let puedeBeber = edad >= 18;
+respuesta1.textContent = puedeBeber;
+
+let puedeIngresar = edad >= 18 && edad <= 30;
+respuesta2.textContent = puedeIngresar;
+
+let entraGratid = edad == 20 || edad == 25;
+respuesta3.textContent = entraGratid;
+
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>
