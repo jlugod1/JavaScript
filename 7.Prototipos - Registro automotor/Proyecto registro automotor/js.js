@@ -22,6 +22,7 @@ Automovil.prototype.venderAutomovil =  function(nuevoTitular){
         return nuevoTitular;
 
 }
+
 //verAuto (que va a retonar el resultado de concatenar las propiedades del automovil con el formato: Marca Modelo - Año - Titular)
 Automovil.prototype.verAuto= function(){
 

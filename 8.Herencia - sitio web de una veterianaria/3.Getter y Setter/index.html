@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//los getter y setter nos ayudan a modificar las propidades
+//de nuestro objetos esta se haen dentro de la clase
+//y se coloca _propiedad; con_ para identificar que estas son privadas
+//get = obtener
+
+//set= establecer
+class deportista{
+ constructor(nombre, apellido){
+this.nombre= nombre;
+this.apellido = apellido;
+}
+
+}
+
+class futbolista extends deportista{
+    constructor(nombre, apellido, goles){
+        super(nombre, apellido);
+        this.goles = goles;
+    }
+get goles(){
+    return this._goles;
+
+
+}
+
+set goles(nuevoGol){
+this._goles = nuevoGoles;
+
+
+}
+
+}
+
+
+
+
+    </script>
+</body>
+</html>

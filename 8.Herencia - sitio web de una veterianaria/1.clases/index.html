@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//construir clases
+class Papel {
+constructor(alto, ancho){
+    this.alto = alto;
+    this.ancho = ancho;
+}
+}
+//a partirn de clases pude intanciar los objetos en vez
+//del odjeto prototipico. eje;
+miPapel = new Papel(6, 5);
+
+//esto es uan clases anonima por que no es nombrada
+let PapelA = class{
+
+    constructor(alto, ancho){
+    this.alto = alto;
+    this.ancho = ancho;
+}
+
+}
+
+//Es una clase nombrada
+let PapelB = class papeLx{
+
+constructor(alto, ancho){
+this.alto = alto;
+this.ancho = ancho;
+}
+
+}
+
+//si quiero crear otro ojeto a debemos declarar primero la clase
+//osea que el objeto que creemos siempre debe estar debajo de la clase
+//por la que se esta instanciando
+
+    </script>
+</body>
+</html>

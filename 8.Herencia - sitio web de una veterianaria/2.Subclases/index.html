@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//todas las clases deben de tener un construtor sino arrajará
+//un error por defecto.
+//si queremos que una clases herede otra clase tenemos que colocar en 
+//la clase  hi extends para que herdede de la clase padre
+//ejemplo deportista  herada a sus atributos a futbolista extends
+//en el construtor colocariasmos super y en parentecias las cosa que heredé
+
+class deportista{
+ constructor(nombre, apellido){
+this.nombre= nombre;
+this.apellido = apellido;
+}
+
+}
+
+class futbolista extends deportista{
+    constructor(nombre, apellido, goles){
+        super(nombre, apellido);
+        this.goles = goles;
+    }
+}
+
+    </script>
+</body>
+</html>
