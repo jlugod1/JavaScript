@@ -1,0 +1,17 @@
+{
+
+
+
+ "nombre": "Pedro Toledo",
+ "edad": 24,
+ "esEstudiante":false,
+ "direccion":{
+
+"calle":"Av. Siempreviva 742",
+"ciudad": "Sprinfield"
+
+ },
+ "telefono":["555-55-55555",
+                "555-555-555-6"]
+
+}

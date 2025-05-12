@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nombre"></div>
+    <script>
+let datosJson;
+let xhr = new XMLHttpRequest();//este odjeto nos sirve para
+//solicitar a un odjeto json que nos brinde inforamcion
+xhr.open('GET', "persona.json", true);//este metodo probiene de odjeot que creamos
+//y usamos el get para odtener la informacion el persona.json es elnombre 
+///del archivo json, y true si es asincronico, por lo qeu la solucitud se puede llevar en segundo plano
+xhr.responseType = 'json';
+xhr.onload = function(){//esto es un evento cuando se carge
+  //  es uan solicituf que se encadena cuando al solicitu XMLHttpRequest 
+  //a sido completada exitosamente, se utiza pra avisar añ servidor que se a odtenido uan respues ta positiva y se 
+  //pueden usar los datos del json
+
+    
+    if(xhr.status === 200){
+        atosJson = xhr.response;
+        let elementoTexto  = document.getElementById("nombre");
+        elementoTexto.textContent = datosJson.nombre;
+        
+
+
+    }else{
+        //manejar el error
+    }
+
+}
+
+xhr.send();//con este metodo se es que funciona todo ya que esta es la que 
+//manda la solicitud 
+
+/*Prácticas: Datos en JSON 1
+Dado el archivo auxiliar datos.json, obtener los datos
+ de dicho archivo utilizando XMLHttpRequest y asigne cada 
+campo a la variable correspondiente ya declarada.*/
+let titulo;
+let director;
+let lanzamiento;
+let duracion;
+let actores;
+let premioOscar;
+
+function obtenerDatos() {
+let datosJson;
+let xhr = new XMLHttpRequest();
+xhr.open('GET', "datos.json", true);
+xhr.responseType = 'json';
+xhr.onload = function(){
+    if(xhr.status === 200){
+        atosJson = xhr.response;
+     
+       titulo= datosJson.titulo;
+        director= datosJson.director;
+            lanzamiento= datosJson.lanzamiento;
+              duracion= datosJson.duracion;
+                actores= datosJson.actores;
+                premioOscar= datosJson.premioOscar;
+
+
+    }else{
+        //manejar el error
+    }
+
+}
+
+xhr.send();
+    
+    
+    
+    
+    
+
+}
+    </script>
+</body>
+</html>

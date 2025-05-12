@@ -3,13 +3,15 @@ class Animal{
       this.nombre = nombre;
       this.peso = peso;
       this.edad = edad;
-      this.informacion= function(){
-       
-      let mensaje = `Nombre: ${this.nombre}, Peso: ${this.peso} kg, Edad: ${this.edad} años`;
-      return mensaje;
-
-    }
+      
         }
+
+    informacion(){
+       
+      return `Nombre: ${this.nombre}, Peso: ${this.peso} kg, Edad: ${this.edad} años`;
+      
+
+    }    
      }
     
    class Perro extends Animal{
@@ -19,7 +21,10 @@ class Animal{
 
 
     }
-
+informacion(){
+       
+      return `Nombre: ${this.nombre}, Peso: ${this.peso} kg, Edad: ${this.edad} años  ${this.raza}`;
+    }
 
    }
    class Conejo extends Animal{
@@ -29,6 +34,9 @@ class Animal{
 
 
     }
+    informacion(){
+       
+      return `Nombre: ${this.nombre}, Peso: ${this.peso} kg, Edad: ${this.edad} años ${this.color}`;}
 
 
    }
@@ -40,7 +48,9 @@ class Animal{
 
 
     }
-
+informacion(){
+       
+      return `Nombre: ${this.nombre}, Peso: ${this.peso} kg, Edad: ${this.edad} años ${this.sexo}`;}
 
    }
    

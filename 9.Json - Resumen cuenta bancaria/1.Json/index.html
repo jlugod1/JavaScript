@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="nombre"></div>
+
+
+
+    <script>
+//vamos hacer que el json con el html
+//diese qeu asi no es que se trabaja peor es para mostrar
+let miPersona = {
+
+
+ "nombre": "pPedro Toledo",
+ "edad": 24,
+ "esEstudiante":false,
+ "direccion":{
+
+"calle":"Av. Siempreviva 742",
+"ciudad": "Sprinfield"
+
+ },
+ "telefono":["555-55-55555",
+                "555-555-555-6"]
+
+}
+
+let texto = document.getElementById("nombre");
+texto.textContent = miPersona.nombre;
+//esta es foma super facil de usar, pero casi nunca lo haremos asi
+//pero esto demuestra que podemos guardar los datos en una variable
+
+
+
+    </script>
+</body>
+</html>
