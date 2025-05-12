@@ -1,0 +1,14 @@
+{
+  "nombre": "Pedro Toledo",
+  "edad": 24,
+  "saldo": 1321,
+  "numeroCuenta": "1234-5678-9012-3456",
+  "direccion": {
+    "calle": "Av. Siempreviva 742",
+    "ciudad": "Springfield"
+  },
+  "telefono": [
+    "555-55-55555",
+    "555-555-555-6"
+  ]
+}

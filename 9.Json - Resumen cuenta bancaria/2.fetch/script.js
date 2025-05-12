@@ -25,3 +25,33 @@ datosJson= salida;
 let elementoTexto = document.getElementById("nombre");
 elementoTexto.textContent = datosJson.nombre;
 })
+/*
+Prácticas: Fetch 1
+Dado el archivo auxiliar datos.json, 
+obtener los datos de dicho archivo 
+utilizando fetch y asigne cada campo 
+a la variable correspondiente ya
+ declarada.
+
+
+
+*/
+function obtenerDatos() {
+    
+    let datosJson;
+    
+    fetch('datos.json').then(res=>res.json()).then((salida)=> {
+        
+        datosJson = salida;
+        datosJson.titulo;
+        datosJson.director;
+        datosJson.lanzamiento;
+        datosJson.datosJson.duracion;
+        datosJson.actores;
+        datosJson.premioOscar;
+        
+        
+    })
+    
+    
+}

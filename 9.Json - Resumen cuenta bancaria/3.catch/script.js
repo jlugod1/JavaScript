@@ -1,18 +1,5 @@
-//FETCH libreria
-//extraer /recuperar
-//solicitufes htto asincronas
-
-//es una alternativa a XMLHttpRequest
-//interfaz  + simple / simtaxis mas limpia
-
-//mas facil de usar
-//mas moderna 
-//devuelve una promesa
-
-//una promesa :es un objeto que representa a un valor que estara dispunible o esta disponible
-
-
-
+//catch nos piermite tomar los errores que se puedan producir
+//y poder manejarlos, es un metodo que se utiliza en promesas para manejar los posibles errores
 
 let datosJson;
 
@@ -25,3 +12,34 @@ datosJson= salida;
 let elementoTexto = document.getElementById("nombre");
 elementoTexto.textContent = datosJson.nombre;
 })
+.catch(function(error){
+alert(error)})
+
+/* Prácticas: Catch 1
+Dado el código ya desarrollado en el ejercicio Fetch 1,
+ agregar el elemento catch para capturar 
+ posibles errores e imprimir en consola el error.*/
+
+ let titulo;
+let director;
+let lanzamiento;
+let duracion;
+let actores;
+let premioOscar;
+
+function obtenerDatos() {
+    fetch('datos.json')
+    .then(respuesta => respuesta.json())
+    .then(function(salida) {
+        titulo = salida.titulo;
+        director = salida.director;
+        lanzamiento = salida.lanzamiento;
+        duracion = salida.duracion;
+        actores = salida.actores;
+        premioOscar = salida.premioOscar;
+    }).catch(function(error){
+        
+        alert(error)
+        
+    })
+}
