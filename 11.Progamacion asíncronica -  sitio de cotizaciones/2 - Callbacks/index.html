@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <head>
+    <title>Callbacks</title>
+  </head>
+  <body>
+    <script>
+      //callback en programacios nos permite hacer progamacion asincronica
+      //eje cuando vas a una filas y hay una señora de lante de ti y le dices qeu 
+      //te vas pero que te avise, la señora es el callback
+      function avanzaFila(callback) {
+        setTimeout(function() {
+          console.log("Tu turno ha llegado");
+          callback();
+          }, 5000);
+      }
+
+      function mujerTeLlama() {
+        console.log("Te presentas a tu turno");
+      }
+
+      console.log("Llegas a la fila");
+      avanzaFila(mujerTeLlama);
+      console.log("Te vas a comprar cafe");
+    /*Prácticas: Callbacks 1
+Dada la función imprimir() ya desarrollada,
+ programar la función test que dispare un
+  timeout con un tiempo de 2000, y que
+   cumplido el tiempo, llame a la funcion 
+   callback
+ pasandole como mensaje lo 
+ siguiente: Hola mundo*/
+
+ function test(callback) {
+       setTimeout(function() {
+           let mensaje = "Hola mundo";
+           callback();
+           
+           
+       }, 2000);
+}
+
+function imprimir(mensaje) {
+    console.log(mensaje);
+}
+    
+    
+    
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <head>
+    <title>Async/Await</title>
+  </head>
+  <body>
+    <script>
+
+
+   // Aquí comienza un bloque de JavaScript (código que puede hacer que la página sea interactiva)
+
+    // Declaramos una función llamada "obtenerTodo"
+    // La palabra clave "async" significa que esta función será asíncrona.
+    // Es decir, podrá esperar ciertos procesos que tardan en completarse (como pedir datos por internet).
+    async function obtenerTodo() {
+      
+      //console.log("Este código está al comienzo", respuestaGasolina);
+      // Esto se muestra en la consola del navegador para indicar que se está ejecutando la primera parte de la función
+
+      // Usamos "fetch" para hacer una solicitud a una API (un servicio en internet)
+      // Esta API devuelve los precios públicos de la gasolina en México
+      // "await" le dice al programa que espere hasta que la respuesta esté lista
+      //let respuestaGasolina = await fetch('https://open.er-api.com/v6/latest/USD');
+
+      // Convertimos la respuesta a formato JSON (un formato fácil de usar en JavaScript)
+      // También usamos "await" porque convertir a JSON también puede tardar un poco
+      //l/et datosGasolina = await respuestaGasolina.json();
+
+     // console.log("Este código está al medio");
+      // Esto se muestra para que sepamos que ya obtuvimos los datos de la gasolina y ahora sigue la segunda parte
+
+      // Ahora pedimos los datos del precio del dólar desde otra API
+      let respuestaDolar = await fetch('https://open.er-api.com/v6/latest/USD');
+
+      // Convertimos esa respuesta a JSON también
+      let datosDolar = await respuestaDolar.json();
+
+      // Mostramos ambos datos en la consola
+      console.log( datosDolar);
+
+      console.log("Este código está al final");
+      // Esto indica que ya se terminó de ejecutar todo el código dentro de la función
+    }
+
+    // Aquí se llama (ejecuta) la función que definimos arriba
+    // Si no pusiéramos esta línea, el código no haría nada
+    obtenerTodo();
+    </script>
+  </body>
+</html>

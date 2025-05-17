@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <head>
+    <title>Manejo de Errores</title>
+  </head>
+  <body>
+    <script>
+
+      //estas son tres forma de manejar errores en operaciones asincronas:
+
+
+      /*//CALLBACKS
+      function sumarNumeros(a, b, callback) {
+        setTimeout(function() {
+          if(typeof a != 'number' || typeof b != 'number') {
+            return callback(new Error('Algun argumento no es numero'));
+          }
+          callback(null, a+b);
+        }, 1000); 
+      }
+
+      sumarNumeros('1', 2, function(error, resultado) {
+        if (error) {
+          console.error(error);
+        } else {
+          console.log(resultado);
+        }
+      });
+
+      //PROMESAS
+      function sumarNumeros(a, b) {
+        return new Promise(function(resolve, reject) {
+          setTimeout(function() {
+            if(typeof a != 'number' || typeof b != 'number') {
+              reject(new Error("Ambos argumentos deben ser numeros"));
+            } else {
+              resolve(a + b);
+            }
+          }, 1000);
+        })
+         
+      }
+
+      sumarNumeros(1, '2')
+      .then(function(resultado) {
+        console.log(resultado);
+      }).catch(function(error) {
+        console.error(error);
+      })*/
+
+
+      //ASYNC/AWAIT
+      async function sumarNumeros(a, b) {
+        if(typeof a != 'number' || typeof b != 'number') {
+          throw new Error('Alguno de los argumentos no es numero');
+        }
+        return a + b
+      }
+
+      async function manejarErrores() {
+        try{
+          let resultado = await sumarNumeros('2', 3);
+          console.log(resultado);
+        } catch (error) {
+          console.error(error.message);
+        }
+      }
+
+      manejarErrores();
+
+
+
+/*Prácticas: Errores Asincronía 1
+En primer lugar, se solicita lanzar
+ un error (new Error) si el numero es
+  igual a 0 en la función tablaDelCinco(). 
+  Además, programar la función manejarErrores(),
+   que utilizando un bloque try catch llame a la 
+   función tablaDelCinco() utilizando la palabra clave
+    await. Si se genera un error (es decir que el catch
+     captura ese caso) imprimir en consola (utilizando
+      console.error) el mensaje de error, y en caso contrario
+       imprimir
+ en consola el resultado de la función tablaDelCinco().*/
+async function tablaDelCinco(numero) {
+    if(numero === 0) {
+    throw new Error("numero no puede ser 0");
+    }
+    
+        return 5*numero;
+
+}
+
+async function manejarErrores() {
+    try{
+        let resultado = await tablaDelCinco(numero);
+    console.log(resultado);
+        
+    }catch(error){
+            console.error(error.message);
+        }
+    }
+
+
+    </script>
+  </body>
+</html>
